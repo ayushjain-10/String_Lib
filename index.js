@@ -113,3 +113,36 @@ function snakeCase(str){
 }
 snakeCase("   Hello    world   ")
 console.log('------')
+
+// camelCase(): Camel Case -> camelCase
+console.log('Challenge 7- camelCase()')
+function camelCase(str){
+    console.log('Original - '+str)
+    str = str.toLowerCase()
+    str= str.trim();
+    length= str.length
+    new_str= ''
+    for(i=0; i<=length; i++){
+        if(str[i]==" "){
+            str = str.replace(str[i+1], str[i+1].toUpperCase())
+        }
+        else{
+            new_str+= str.substring(i,i+1)
+        }
+    }
+    console.log('New - '+ new_str)
+}
+camelCase("   Hello world ")
+console.log('------')
+
+// shift(): Hello World -> ello WorldH
+console.log('Challenge 8- shift()')
+function shift(str){
+    console.log('Original - '+str)
+    char = str[0]
+    str= str.slice(1)
+    str+= char
+    console.log('New - '+ str)
+}
+shift("Hello world")
+console.log('------')
