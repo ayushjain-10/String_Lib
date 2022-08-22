@@ -47,6 +47,7 @@ function removeExtraSpaces(str){
                 continue
             }
             else{
+                
                 new_str+= str.substring(i,i+1)
             }
         }
@@ -57,3 +58,58 @@ function removeExtraSpaces(str){
     console.log('New - '+ new_str)
 }
 removeExtraSpaces("   Hello    world!   ")
+console.log('------')
+
+// kebobCase(): " Hello world " -> "hello-world"
+console.log('Challenge 5- kebobCase()')
+function kebobCase(str){
+    console.log('Original - '+str)
+    str = str.toLowerCase()
+    str= str.trim();
+    length= str.length
+    new_str= ''
+    for(i=0; i<=length; i++){
+        if(str[i]==" "){
+            if(str[i+1]==" "){
+                continue
+            }
+            else{
+                new_str+= str.substring(i,i+1)
+            }
+        }
+        else{
+            new_str+= str.substring(i,i+1)
+        }
+    }
+    new_str = new_str.replaceAll(" ", "-")
+    console.log('New - '+ new_str)
+}
+kebobCase("   Hello    world    ")
+console.log('------')
+
+// snakeCase(): " what the heck " -> "what_the_heck"
+console.log('Challenge 6- snakeCase()')
+function snakeCase(str){
+    console.log('Original - '+str)
+    str = str.toLowerCase()
+    str= str.trim();
+    length= str.length
+    new_str= ''
+    for(i=0; i<=length; i++){
+        if(str[i]==" "){
+            if(str[i+1]==" "){
+                continue
+            }
+            else{
+                new_str+= str.substring(i,i+1)
+            }
+        }
+        else{
+            new_str+= str.substring(i,i+1)
+        }
+    }
+    new_str = new_str.replaceAll(" ", "_")
+    console.log('New - '+ new_str)
+}
+snakeCase("   Hello    world   ")
+console.log('------')
