@@ -32,3 +32,28 @@ function capitalizeWords(str){
     console.log('New - '+str)
 }
 capitalizeWords('do all the things')
+console.log('------')
+
+// removeExtraSpaces(): "   Hello    world!   " -> "Hello world!"
+console.log('Challenge 4- removeExtraSpaces()')
+function removeExtraSpaces(str){
+    console.log('Original - '+str)
+    str= str.trim();
+    length= str.length
+    new_str= ''
+    for(i=0; i<=length; i++){
+        if(str[i]==" "){
+            if(str[i+1]==" "){
+                continue
+            }
+            else{
+                new_str+= str.substring(i,i+1)
+            }
+        }
+        else{
+            new_str+= str.substring(i,i+1)
+        }
+    }
+    console.log('New - '+ new_str)
+}
+removeExtraSpaces("   Hello    world!   ")
