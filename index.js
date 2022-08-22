@@ -146,3 +146,32 @@ function shift(str){
 }
 shift("Hello world")
 console.log('------')
+
+// makeHashTag(): "Amazing bongo drums for sale" -> ['#amazing', '#bongo', '#drums']
+console.log('Challenge 9- makeHashTag()')
+function makeHashTag(str){
+    console.log('Original - '+str)
+    list = str.split(" ")
+    const sort = list.sort((a,b) => b.length - a.length);
+    for(var i=0 ; i < sort.length ;i++){
+        sort[i]= "#" + sort[i];
+    }
+    sort.splice(3, sort.length)
+    console.log(sort)
+}
+makeHashTag("Amazing bongo drums for sale")
+console.log('------')
+
+// isEmpty(): "Abc def" -> isEmpty("Abc def") // false
+console.log('Challenge 10- isEmpty()')
+function isEmpty(str){
+    console.log('Original - '+str)
+    str= str.trim();
+    if( str= ""){
+        return false
+    }
+
+    console.log('New - '+ str)
+}
+isEmpty("  ")
+console.log('------')
