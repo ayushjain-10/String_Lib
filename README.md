@@ -1,6 +1,6 @@
 # String Library
 
-The goal of this assignment is to create a JavaScript Library of String functions. 
+The goal of this library is to create a JavaScript Library of String functions. 
 
 **Function 1** 
 
