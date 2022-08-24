@@ -1,4 +1,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ayushjain-10/String_Lib)
+![npm](https://img.shields.io/npm/v/@ayush_10/string_lib)
 
 # String Library
 
