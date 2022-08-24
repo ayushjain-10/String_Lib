@@ -1,3 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/ayushjain-10/String_Lib)
+
 # String Library
 
 The goal of this library is to create a JavaScript Library of String functions. 
