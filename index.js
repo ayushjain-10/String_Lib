@@ -4,6 +4,7 @@ function capitalize(str){
     console.log('Original - '+str)
     str= str[0].toUpperCase() + str.slice(1)
     console.log('New - '+str)
+    return str
 }
 capitalize('ayush jain')
 console.log('------')
@@ -14,6 +15,7 @@ function allCaps(str){
     console.log('Original - '+ str)
     str = str.toUpperCase();
     console.log('New - '+ str)
+    return str
 }
 allCaps('ayush jain')
 console.log('------')
@@ -30,6 +32,7 @@ function capitalizeWords(str){
         }
     }
     console.log('New - '+str)
+    return str
 }
 capitalizeWords('do all the things')
 console.log('------')
@@ -56,6 +59,7 @@ function removeExtraSpaces(str){
         }
     }
     console.log('New - '+ new_str)
+    return new_str
 }
 removeExtraSpaces("   Hello    world!   ")
 console.log('------')
@@ -83,6 +87,7 @@ function kebobCase(str){
     }
     new_str = new_str.replaceAll(" ", "-")
     console.log('New - '+ new_str)
+    return new_str
 }
 kebobCase("   Hello    world    ")
 console.log('------')
@@ -110,11 +115,12 @@ function snakeCase(str){
     }
     new_str = new_str.replaceAll(" ", "_")
     console.log('New - '+ new_str)
+    return new_str
 }
 snakeCase("   Hello    world   ")
 console.log('------')
 
-// camelCase(): Camel Case -> camelCase
+// camelCase(): Hello world -> helloWorld
 console.log('Challenge 7- camelCase()')
 function camelCase(str){
     console.log('Original - '+str)
@@ -131,6 +137,7 @@ function camelCase(str){
         }
     }
     console.log('New - '+ new_str)
+    return new_str
 }
 camelCase("   Hello world ")
 console.log('------')
@@ -143,6 +150,7 @@ function shift(str){
     str= str.slice(1)
     str+= char
     console.log('New - '+ str)
+    return str
 }
 shift("Hello world")
 console.log('------')
@@ -158,6 +166,7 @@ function makeHashTag(str){
     }
     sort.splice(3, sort.length)
     console.log(sort)
+    return sort
 }
 makeHashTag("Amazing bongo drums for sale")
 console.log('------')
@@ -172,6 +181,18 @@ function isEmpty(str){
     }
 
     console.log('New - '+ str)
+    return str
 }
 isEmpty("  ")
 console.log('------')
+
+module.exports.capitalize = capitalize
+module.exports.allCaps = allCaps
+module.exports.capitalizeWords = capitalizeWords
+module.exports.removeExtraSpaces = removeExtraSpaces
+module.exports.kebobCase = kebobCase
+module.exports.snakeCase = snakeCase
+module.exports.camelCase = camelCase
+module.exports.shift = shift
+module.exports.makeHashTag = makeHashTag
+module.exports.isEmpty = isEmpty
