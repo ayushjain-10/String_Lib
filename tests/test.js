@@ -5,7 +5,7 @@ test('capitalize', () => {
     expect(result).toBe('Hello world')
   })
 
-  test('allCaps', () => {
+test('allCaps', () => {
     const result = str.allCaps('hello world')
     expect(result).toBe('HELLO WORLD')
   })
