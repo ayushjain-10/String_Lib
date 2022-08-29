@@ -5,6 +5,10 @@
 
 The goal of this library is to create a JavaScript Library of String functions. 
 
+**NPM Package** 
+
+https://www.npmjs.com/package/@ayush_10/string_lib
+
 **Function 1** 
 
 `capitalize()` - makes the **first character** of a given string uppercase.
