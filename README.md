@@ -2,7 +2,7 @@
 ![npm](https://img.shields.io/npm/v/@ayush_10/string_lib)
 
 # String Library
-
+ 
 The goal of this library is to create a JavaScript Library of String functions. 
 
 **NPM Package** 
