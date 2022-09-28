@@ -1,10 +1,5 @@
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-param-reassign */
-/* eslint-disable eqeqeq */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
-/* eslint-disable camelcase */
 // capitalize(): hello world -> Hello world
+let i = 0;
 console.log('Challenge 1- capitalize()');
 function capitalize(str) {
   console.log(`Original - ${str}`);
@@ -30,15 +25,15 @@ console.log('------');
 console.log('Challenge 3- capitalizeWords()');
 function capitalizeWords(str) {
   console.log(`Original - ${str}`);
-  new_str = str.replace(str[0], str[0].toUpperCase());
-  len = str.length;
+  let newStr = str.replace(str[0], str[0].toUpperCase());
+  const len = str.length;
   for (i = 0; i <= len; i += 1) {
     if (str[i] === ' ') {
-      new_str = new_str.replace(new_str[i + 1], new_str[i + 1].toUpperCase());
+      newStr = newStr.replace(newStr[i + 1], newStr[i + 1].toUpperCase());
     }
   }
-  console.log(`New - ${new_str}`);
-  return new_str;
+  console.log(`New - ${newStr}`);
+  return newStr;
 }
 capitalizeWords('do all the things');
 console.log('------');
@@ -47,23 +42,23 @@ console.log('------');
 console.log('Challenge 4- removeExtraSpaces()');
 function removeExtraSpaces(str) {
   console.log(`Original - ${str}`);
-  Str = str.trim();
-  len = str.length;
-  new_str = '';
-  // eslint-disable-next-line no-plusplus
-  for (i = 0; i <= len; i++) {
+  const Str = str.trim();
+  const len = str.length;
+  let newStr = '';
+  for (i = 0; i <= len; i += 1) {
     if (Str[i] === ' ') {
       if (Str[i + 1] === ' ') {
+        // eslint-disable-next-line no-continue
         continue;
       } else {
-        new_str += Str.substring(i, i + 1);
+        newStr += Str.substring(i, i + 1);
       }
     } else {
-      new_str += Str.substring(i, i + 1);
+      newStr += Str.substring(i, i + 1);
     }
   }
-  console.log(`New - ${new_str}`);
-  return new_str;
+  console.log(`New - ${newStr}`);
+  return newStr;
 }
 removeExtraSpaces('   Hello    world!   ');
 console.log('------');
@@ -72,24 +67,25 @@ console.log('------');
 console.log('Challenge 5- kebobCase()');
 function kebobCase(str) {
   console.log(`Original - ${str}`);
-  str = str.toLowerCase();
-  str = str.trim();
-  len = str.length;
-  new_str = '';
-  for (i = 0; i <= len; i++) {
-    if (str[i] == ' ') {
-      if (str[i + 1] == ' ') {
+  let Str = str.toLowerCase();
+  Str = Str.trim();
+  const len = Str.length;
+  let newStr = '';
+  for (i = 0; i <= len; i += 1) {
+    if (Str[i] === ' ') {
+      if (Str[i + 1] === ' ') {
+        // eslint-disable-next-line no-continue
         continue;
       } else {
-        new_str += str.substring(i, i + 1);
+        newStr += Str.substring(i, i + 1);
       }
     } else {
-      new_str += str.substring(i, i + 1);
+      newStr += Str.substring(i, i + 1);
     }
   }
-  new_str = new_str.replaceAll(' ', '-');
-  console.log(`New - ${new_str}`);
-  return new_str;
+  newStr = newStr.replaceAll(' ', '-');
+  console.log(`New - ${newStr}`);
+  return newStr;
 }
 kebobCase('   Hello    world    ');
 console.log('------');
@@ -98,24 +94,25 @@ console.log('------');
 console.log('Challenge 6- snakeCase()');
 function snakeCase(str) {
   console.log(`Original - ${str}`);
-  str = str.toLowerCase();
-  str = str.trim();
-  len = str.length;
-  new_str = '';
-  for (i = 0; i <= len; i++) {
-    if (str[i] == ' ') {
-      if (str[i + 1] == ' ') {
+  let Str = str.toLowerCase();
+  Str = Str.trim();
+  const len = Str.length;
+  let newStr = '';
+  for (i = 0; i <= len; i += 1) {
+    if (Str[i] === ' ') {
+      if (Str[i + 1] === ' ') {
+        // eslint-disable-next-line no-continue
         continue;
       } else {
-        new_str += str.substring(i, i + 1);
+        newStr += Str.substring(i, i + 1);
       }
     } else {
-      new_str += str.substring(i, i + 1);
+      newStr += Str.substring(i, i + 1);
     }
   }
-  new_str = new_str.replaceAll(' ', '_');
-  console.log(`New - ${new_str}`);
-  return new_str;
+  newStr = newStr.replaceAll(' ', '_');
+  console.log(`New - ${newStr}`);
+  return newStr;
 }
 snakeCase('   Hello    world   ');
 console.log('------');
@@ -124,19 +121,19 @@ console.log('------');
 console.log('Challenge 7- camelCase()');
 function camelCase(str) {
   console.log(`Original - ${str}`);
-  str = str.toLowerCase();
-  str = str.trim();
-  len = str.length;
-  new_str = '';
-  for (i = 0; i <= len; i++) {
-    if (str[i] == ' ') {
-      str = str.replace(str[i + 1], str[i + 1].toUpperCase());
+  let Str = str.toLowerCase();
+  Str = Str.trim();
+  const len = Str.length;
+  let newStr = '';
+  for (i = 0; i <= len; i += 1) {
+    if (Str[i] === ' ') {
+      Str = Str.replace(Str[i + 1], Str[i + 1].toUpperCase());
     } else {
-      new_str += str.substring(i, i + 1);
+      newStr += Str.substring(i, i + 1);
     }
   }
-  console.log(`New - ${new_str}`);
-  return new_str;
+  console.log(`New - ${newStr}`);
+  return newStr;
 }
 camelCase('   Hello world ');
 console.log('------');
@@ -145,11 +142,11 @@ console.log('------');
 console.log('Challenge 8- shift()');
 function shift(str) {
   console.log(`Original - ${str}`);
-  char = str[0];
-  str = str.slice(1);
-  str += char;
-  console.log(`New - ${str}`);
-  return str;
+  const char = str[0];
+  let Str = str.slice(1);
+  Str += char;
+  console.log(`New - ${Str}`);
+  return Str;
 }
 shift('Hello world');
 console.log('------');
@@ -158,9 +155,9 @@ console.log('------');
 console.log('Challenge 9- makeHashTag()');
 function makeHashTag(str) {
   console.log(`Original - ${str}`);
-  list = str.split(' ');
+  const list = str.split(' ');
   const sort = list.sort((a, b) => b.length - a.length);
-  for (let i = 0; i < sort.length; i++) {
+  for (i = 0; i < sort.length; i += 1) {
     sort[i] = `#${sort[i]}`;
   }
   sort.splice(3, sort.length);
@@ -174,13 +171,13 @@ console.log('------');
 console.log('Challenge 10- isEmpty()');
 function isEmpty(str) {
   console.log(`Original - ${str}`);
-  str = str.trim();
-  if (str == '') {
+  const Str = str.trim();
+  if (Str === '') {
     return true;
   }
 
-  console.log(`New - ${str}`);
-  return str;
+  console.log(`New - ${Str}`);
+  return Str;
 }
 isEmpty('  ');
 console.log('------');
